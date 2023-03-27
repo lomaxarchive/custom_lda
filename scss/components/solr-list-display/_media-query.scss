@@ -1,0 +1,123 @@
+/**
+ * Media queries for the user content counts view component.
+ */
+
+.solr-search-content {
+  @media #{$mobile} {
+    header,
+    .view-header {
+      .flex-grid,
+      &.flex-grid {
+        &.flex-lower-grid {
+          padding: 11px 0 !important;
+        }
+
+        .header-pager.flex-col.center.desktop-pager {
+          display: none;
+        }
+
+        &.mobile-pager {
+          display: flex;
+          padding: 3px 0 14px 0;
+          text-align: center;
+          width: 100%;
+
+          .header-pager {
+            justify-content: center;
+            display: flex;
+            flex: 1;
+          }
+        }
+
+        .entity-blocks {
+          .views-exposed-form {
+            width: 100%;
+
+            .form-item {
+              &.form-group {
+                margin-bottom: 0px;
+              }
+
+              &.form-item-sort-order {
+                display: inline-block;
+                line-height: 30;
+                vertical-align: middle;
+              }
+
+              &.form-item-sort-by {
+                font-size: 0;
+                vertical-align: middle;
+                width: auto;
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+
+      .form-item-sort-by {
+        padding-right: 7px;
+      }
+    }
+  }
+
+  @media #{$tablet} {
+    header,
+    .view-header {
+      .flex-grid,
+      &.flex-grid {
+        .desktop-pager {
+          display: flex;
+        }
+
+        &.mobile-pager {
+          display: none;
+        }
+      }
+
+      .form-item-sort-by {
+        padding-right: 7px;
+      }
+    }
+  }
+
+  @media #{$normal} {
+    header,
+    .view-header {
+      .flex-grid,
+      &.flex-grid {
+        .desktop-pager {
+          display: flex;
+        }
+
+        &.mobile-pager {
+          display: none;
+        }
+      }
+
+      .form-item-sort-by {
+        padding-right: 7px;
+      }
+    }
+  }
+
+  @media #{$wide} {
+    header,
+    .view-header {
+      .flex-grid,
+      &.flex-grid {
+        .desktop-pager {
+          display: flex;
+        }
+
+        &.mobile-pager {
+          display: none;
+        }
+      }
+
+      .form-item-sort-by {
+        padding-right: 7px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+/**
+ * Media queries for the front page search box.
+ */
+
+.form-item {
+  &.form-item-search-api-fulltext {
+    @media #{$mobile} {
+      padding: 0 30px;
+
+      &::before {
+        top: 4px;
+      }
+      input.form-autocomplete {
+        height: 50px;
+      }
+    }
+
+    @media #{$tablet} {
+      &::before {
+        top: 13px;
+      }
+      input.form-autocomplete {
+        height: 68px;
+      }
+    }
+
+    @media #{$normal} {
+      &::before {
+        top: 13px;
+      }
+      input.form-autocomplete {
+        height: 68px;
+      }
+    }
+
+    @media #{$wide} {
+      &::before {
+        top: 13px;
+      }
+      input.form-autocomplete {
+        height: 68px;
+      }
+    }
+  }
+}
+
+.front-page-view article .field--name-field-display-block .block-content .block-title {
+  @media #{$mobile} {
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 34px;
+    padding-bottom: 34px;
+    margin-bottom: 0;
+  }
+}

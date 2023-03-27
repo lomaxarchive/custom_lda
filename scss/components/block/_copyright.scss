@@ -1,0 +1,30 @@
+.copyright {
+  border-top: 1px solid #B5B7B9;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  padding-bottom: 1.5rem;
+
+  ul.menu {
+    text-align: right;
+
+    &.nav > li > a:hover,
+    &.nav > li > a:focus {
+      background-color: transparent;
+    }
+
+    li {
+      display: inline-block;
+
+      &.first {
+        span {
+          margin-left: 0px;
+        }
+      }
+
+      a {
+        font-size: 16px;
+        color: #3a3b3c;
+      }
+    }
+  }
+}

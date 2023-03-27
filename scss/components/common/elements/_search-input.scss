@@ -1,0 +1,45 @@
+%search-input {
+  button {
+    position: absolute;
+    left: 2px;
+    background-color: transparent;
+    border: none;
+    top: -6px;
+    height: 34px;
+
+    .glyphicon-search {
+      display: none;
+    }
+    
+    &::before {
+      color: white;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.2px;
+      width: 16px;
+      height: 16px;
+      content: "\f002";
+      font-family: $font-awesome-version;
+    }
+  }
+
+  .form-type-textfield.js-form-type-textfield {
+    input {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+      border: 1px solid $search-border;
+      background-color: $not-front-search-bg;
+      padding-left: 35px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      height: 35px;
+      color: white;
+      z-index: 600;
+      position: relative;
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+}

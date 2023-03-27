@@ -1,0 +1,41 @@
+/**
+ * Styling for Download block.
+ */
+.dgi-download-media {
+  padding: ($grid-gutter-width / 2);
+  background-color: $block-bg-color;
+
+  label {
+    font-family: $font-family-base;
+    color: $block-color-emphasized;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  #dgi-download-block-content-wrapper {
+    background-color: $base-color-fifth;
+    margin: 0 -8px;
+    overflow-x: auto;
+    display: block;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: $font-family-elevated;
+    white-space: nowrap;
+
+    a.file-download {
+      color: $base-color-high;
+      display: inline-block;
+      width: 100%;
+      line-height: 2em;
+
+      &::after {
+        font-family: $font-awesome-version;
+        float: right;
+        font-size: 24px;
+        font-weight: 300;
+        content: "\f56d";
+      }
+    }
+  }
+}

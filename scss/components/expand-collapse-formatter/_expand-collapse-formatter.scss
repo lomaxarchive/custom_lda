@@ -1,0 +1,54 @@
+/**
+ * Default expand-collapse-formatter styling, found when implementing the 'expand_collapse_formatter' modules.
+ */
+
+%triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+%triangle-up {
+  @extend %triangle;
+  border-bottom: 13px solid #707070;
+}
+
+%triangle-down {
+  @extend %triangle;
+  border-top: 13px solid #707070;
+}
+
+.expand-collapse {
+  .ec-toggle-link {
+    width: 100%;
+    background-color: #F4F5F6;
+    display: block;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+  }
+
+  .ecf-open {
+    font-size: 0px;
+
+    .ecf-toggle-icon {
+      &::before {
+        @extend %triangle-down;
+      }
+    }
+  }
+
+  .ecf-close {
+    font-size: 0px;
+
+    .ecf-toggle-icon {
+      &::before {
+        @extend %triangle-up;
+      }
+    }
+  }
+}

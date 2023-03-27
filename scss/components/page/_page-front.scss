@@ -1,0 +1,60 @@
+body {
+  background-color: $body-background-color;
+  .nav > li > a:hover,
+  .nav > li > a:focus {
+    background-color: transparent;
+  }
+
+  &.path-frontpage {
+    max-height: 100vh;
+
+    &.navbar-is-open {
+      .mobile-toggle-wrapper {
+        background-color: $base-color;
+      }
+    }
+
+    .solr-search-content {
+      .solr-search-row-content {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    // Chrome/safari overflow fix on drupal's hidden input elements.
+    .views-exposed-form.exposed-search-form {
+      .form-item-not-type,
+      .form-item-is-type {
+        display: none;
+      }
+    }
+
+    .region.region-content {
+      >div.views-element-container {
+        display: none;
+      }
+    }
+
+    .main-container.container {
+      max-height: 100%;
+
+      div,
+      .row {
+        max-height: 100%;
+
+        article {
+          position: relative;
+        }
+      }
+    }
+  }
+
+  @media #{$tablet} {
+    margin-top: 0px;
+  }
+
+  footer {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}

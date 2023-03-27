@@ -1,0 +1,72 @@
+$transition-time: .1s;
+
+%button-hover-transition-to-base-white {
+  -webkit-transition: color ease-in-out $transition-time, border ease-in-out $transition-time;
+  -moz-transition: color ease-in-out $transition-time, border ease-in-out $transition-time;
+  -ms-transition: color ease-in-out $transition-time, border ease-in-out $transition-time;
+  -o-transition: color ease-in-out $transition-time, border ease-in-out $transition-time;
+  transition: color ease-in-out $transition-time, border ease-in-out $transition-time;
+  border: 1px solid rgba($element-border, 1);
+
+  &:hover {
+    color: rgba($white-base, 1);
+    border: 1px solid rgba($element-border, 1);
+  }
+}
+
+%button-hover-transition-to-base-with-background {
+  -webkit-transition: color ease-in-out $transition-time, border ease-in-out $transition-time, background-color ease-in-out $transition-time;
+  -moz-transition: color ease-in-out $transition-time, border ease-in-out $transition-time, background-color ease-in-out $transition-time;
+  -ms-transition: color ease-in-out $transition-time, border ease-in-out $transition-time, background-color ease-in-out $transition-time;
+  -o-transition: color ease-in-out $transition-time, border ease-in-out $transition-time, background-color ease-in-out $transition-time;
+  transition: color ease-in-out $transition-time, border ease-in-out $transition-time, background-color ease-in-out $transition-time;
+  border: 1px solid rgba($element-border, 1);
+
+  &:hover {
+    color: rgba($white-base, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: $base-color;
+    border: 1px solid rgba($base-color, 1);
+  }
+}
+
+%menu-link-main-menu-transition {
+  -webkit-transition: color ease-in-out $transition-time, border-bottom ease-in-out $transition-time;
+  -moz-transition: color ease-in-out $transition-time, border-bottom ease-in-out $transition-time;
+  -ms-transition: color ease-in-out $transition-time, border-bottom ease-in-out $transition-time;
+  -o-transition: color ease-in-out $transition-time, border-bottom ease-in-out $transition-time;
+  transition: color ease-in-out $transition-time, border-bottom ease-in-out $transition-time;
+  border-bottom: 3px solid transparent;
+
+  &:hover {
+    background-color: transparent;
+    border-bottom: 3px solid rgba($white-base, 1);
+    color: rgba($white-base, 1);
+  }
+
+  &:focus {
+    background-color: transparent !important;
+  }
+
+  &.is-active {
+    background-color: transparent !important;
+    border-bottom: 3px solid rgba($white-base, 1);
+    color: white;
+  }
+}
+
+%input-element-transition {
+  border: 1px solid rgba($element-border, .93);
+  background-color: rgba($element-bg-color, .93);
+  -webkit-transition: background-color ease-in-out $transition-time, border ease-in-out $transition-time;
+  -moz-transition: background-color ease-in-out $transition-time, border ease-in-out $transition-time;
+  -ms-transition: background-color ease-in-out $transition-time, border ease-in-out $transition-time;
+  -o-transition: background-color ease-in-out $transition-time, border ease-in-out $transition-time;
+  transition: background-color ease-in-out $transition-time, border ease-in-out $transition-time;
+
+  &:focus {
+    border: 1px solid rgba($element-border-focus, .93);
+    background-color: rgba($element-bg-color-focus, .93);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07);
+  }
+}

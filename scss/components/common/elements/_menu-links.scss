@@ -1,0 +1,11 @@
+%menu-link-main-menu {
+  @extend %menu-link-main-menu-transition;
+  color: rgba($white-base, 1);
+  font-family: $font-family-basic;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.34px;
+  line-height: 26px;
+  padding: 11px;
+  margin: 0 5px;
+}

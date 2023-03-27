@@ -1,0 +1,49 @@
+/**
+ * Default dgi-footer-block styling.
+ */
+
+.block-react-blockdgi-footer-menu-block {
+  #dgi-footer-menu-block {
+    margin-top: 29px;
+    margin-bottom: 30px;
+
+    div.dgi-footer-menu-sub-block {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    nav.navbar.navbar-default {
+      background-color: $footer-menu-background-color;
+    }
+    .container {
+      max-width: 100vw;
+      width: 100%;
+      padding: 0em;
+    }
+    ul.navbar-nav {
+      width: inherit;
+    }
+    .dgi-footer-menu-block {
+      span.footer-menu-headers {
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      li {
+        height: ($font-size-base * 2);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        a {
+          color: $text-color;
+          font-weight: 400;
+        }
+        a:hover, &.active a, a:focus {
+          color: $brand-primary;
+          font-weight: 700;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

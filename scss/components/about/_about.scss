@@ -1,0 +1,67 @@
+body.page-node-type-about {
+  header#navbar.navbar.navbar-default.container {
+    padding-bottom: 48px;
+  }
+
+  .region-content {
+
+    // Extremely long words can break the layout, quick fix here
+    // to allow words to wrap, and break, if necessary.
+    .about-page-top-text,
+    .about-page-bottom-text,
+    .field--name-field-about-top-left,
+    .field--name-field-about-top-right,
+    .field--name-field-about-body-emphasized {
+      word-wrap: break-word;
+    }
+    .about-page-top-text,
+    .about-page-bottom-text {
+      padding: 0px (60px - $grid-gutter-width-half);
+      max-width: 1850px;
+    }
+    @media #{$tablet} {
+      .about-page-bottom-text {
+        div:not(.field) {
+          float: right;
+        }
+      }
+    }
+    @media #{$normal} {
+      .about-page-bottom-text {
+        div:not(.field) {
+          float: left;
+        }
+      }
+    }
+    .field--name-field-about-top-left {
+      font-size: 34px;
+      font-weight: 500;
+      letter-spacing: normal;
+      line-height: 54px;
+      em {
+        color: $brand-text-em-color;
+        font-weight: 600;
+        font-style: normal;
+      }
+    }
+    .field--name-field-about-top-right {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+    .field--name-field-image {
+      padding-top: 48px;
+      padding-bottom: 48px;
+      img {
+        width: 100vw;
+      }
+    }
+    .field--name-field-about-body-emphasized {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: normal;
+      line-height: 40px;
+      padding-bottom: 15px;
+    }
+  }
+}

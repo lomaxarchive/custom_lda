@@ -1,0 +1,85 @@
+/**
+ * Media queries for the list-grid-header component.
+ */
+
+.solr-search-content header,
+.solr-search-content .view-header {
+  @media #{$mobile} {
+    height: auto;
+  }
+
+  @media #{$tablet} {
+    height: auto;
+
+    .header-pager .pager-nav,
+    .header-pager .entity-blocks {
+      display: block;
+      text-align: center;
+
+      form {
+        font-size: 0;
+        line-height: 32px;
+      }
+    }
+
+    .form-actions,
+    #edit-actions--2,
+    #edit-actions--1 {
+      position: relative;
+      top: auto;
+      right: auto;
+      display: block;
+      font-size: 14px;
+    }
+  }
+
+  @media #{$normal} {
+    height: auto;
+
+    .header-pager {
+      vertical-align: middle;
+    }
+
+    .header-pager .pager-nav,
+    .header-pager .entity-blocks {
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+
+      form {
+        font-size: 14px;
+        line-height: 32px;
+      }
+    }
+
+    #edit-actions--2,
+    #edit-actions--1,
+    .form-actions {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px;
+      height: 30px;
+    }
+    
+    .form-item-sort-by,
+    .form-item-sort-order {
+      padding-left: 0px;
+      display: inline-block;
+      width: auto;
+    }
+
+    .entity-blocks {
+      .views-exposed-form {
+        margin-left: $margin-exposed-sort-offset;
+      }
+    }
+
+    .header-pager .entity-block {
+      text-align: right;
+    }
+
+    .entity-blocks {
+      display: inline-block;
+    }
+  }
+}

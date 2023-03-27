@@ -1,0 +1,136 @@
+/**
+ * Basic styling for the footer.
+ */
+
+footer.footer.container {
+
+  .footer-wrapper {
+    background-color: $footer-bg-color;
+    border-top: solid 1px $footer-border-color;
+  }
+
+  .footer-bottom-wrapper {
+    background-color: $footer-bottom-bg-color;
+
+    @media (max-width: #{$screen-sm-max}) {
+      text-align: center;
+    }
+  }
+
+  .region-footer,
+  .region-footer-bottom {
+    @extend .row;
+    margin-left: auto;
+    margin-right: auto;
+
+    & > :first-child {
+      padding-left: 0px;
+    }
+    & > :last-child {
+      padding-right: 0px;
+    }
+  }
+
+  h2 {
+    color: $footer-menu-header-color;
+    font-family: $font-family-basic;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .28px;
+    line-height: 24px;
+    margin-top: 0px;
+  }
+
+  nav {
+    line-height: 0px;
+    li {
+      a {
+        color: $footer-menu-link-color;
+        font-family: $font-family-elevated;
+        font-size: 14px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 34px;
+        padding: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          background-color: unset;
+        }
+      }
+    }
+  }
+
+  .region-footer {
+
+    .block {
+      .block-content {
+        font-family: $font-family-elevated;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        color: $footer-basic-text-color;
+      }
+    }
+    nav,
+    .block-blockgroup {
+      padding-bottom: 34px;
+    }
+
+    @media (min-width: #{$screen-lg-min}) {
+      padding-bottom: 50px;
+      padding-top: 50px;
+
+      nav,
+      .block-blockgroup {
+        padding-bottom: 0px;
+      }
+      #block-basicfootercolumns {
+        border-left: solid 1px $footer-border-color;
+      }
+    }
+
+    @media (max-width: #{$screen-md-max}) {
+      padding-top: 34px;
+
+      #block-basicfootercolumns {
+        padding-top: 34px;
+      }
+      #block-basicfooterlogosection {
+        padding-bottom: 0px;
+        .block-content > section > .block-content {
+          padding-bottom: 34px;
+          border-bottom: solid 1px $footer-border-color;
+        }
+      }
+    }
+  }
+  .region-footer-bottom {
+    font-family: $font-family-elevated;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 34px;
+    nav {
+      li {
+        display: inline-block;
+        padding-right: 15px;
+        a {
+          color: $footer-bottom-text-color;
+        }
+      }
+    }
+
+    .block {
+      color: $footer-bottom-text-color;
+      div.field {
+        padding: 0px;
+        div {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

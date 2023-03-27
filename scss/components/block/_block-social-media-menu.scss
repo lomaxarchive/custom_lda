@@ -1,0 +1,21 @@
+.social-media-menu {
+  ul.menu {
+    text-align: right;
+    font-size: 0px;
+
+    &.nav > li > a:hover,
+    .nav > li > a:focus {
+      background-color: transparent;
+    }
+
+    li {
+      display: inline-block;
+
+      a {
+        font-size: 16px;
+        background-color: white;
+        color: #3a3b3c;
+      }
+    }
+  }
+}

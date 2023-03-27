@@ -1,0 +1,58 @@
+/**
+ * Styling for the Technical Metadata Block.
+ */
+.view-technical-metadata {
+  background-color: $block-bg-color-lighter;
+
+  div.table-header {
+    padding-top: 10px;
+    margin-bottom: 0px;
+    background-color: $block-bg-color;
+    label {
+      padding-left: ($grid-gutter-width / 2);
+      padding-right: ($grid-gutter-width / 2);
+      font-family: $font-family-base;
+      color: $block-color-emphasized;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 41px;
+    }
+    border-bottom: 1px solid $block-border-color;
+  }
+
+  table {
+    font-family: $font-family-elevated;
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 0px;
+    overflow-x: auto;
+    tr {
+      &:first-child {
+        > td,
+        > th {
+          padding-top: .8rem;
+        }
+      }
+      &:last-child {
+        > td,
+        > th {
+          padding-bottom: .8rem;
+        }
+      }
+      th {
+        color: $block-color-emphasized;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+      td {
+        color: $block-color-text;
+        font-weight: 300;
+      }
+      th,
+      td {
+        border-top: none;
+        padding: .4rem ($grid-gutter-width / 2 + 3px);
+      }
+    }
+  }
+}

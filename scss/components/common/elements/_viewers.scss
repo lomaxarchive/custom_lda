@@ -1,0 +1,24 @@
+%viewer-constant {
+  height: 575px;
+  background-color: rgba($grayscale-base, .5);
+}
+
+.openseadragon-viewer {
+  @extend %viewer-constant;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+#islandora-document-preview--content {
+  iframe.pdf {
+    @extend %viewer-constant;
+  }
+}
+
+#islandora-video-preview--content {
+  video {
+    display: inherit;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}

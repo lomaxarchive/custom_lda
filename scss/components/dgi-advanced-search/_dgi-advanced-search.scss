@@ -1,0 +1,16 @@
+/**
+ * Default dgi-advanced-search styling.
+ */
+
+.views-advanced-search-form {
+  .form-item-is-type {
+    .input-group-addon {
+      display: none;
+    }
+  }
+  .form-item-not-type {
+    .input-group-addon {
+      display: none;
+    }
+  }
+}

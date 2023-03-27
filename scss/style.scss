@@ -1,0 +1,73 @@
+// Default variables.
+@import "default-variables";
+@import "components/common/style";
+
+// Utility styles.
+@import "components/utilities/utilities";
+
+// Import pager styling.
+@import "components/pager/pager";
+
+// Bootstrap Framework.
+@import '../bootstrap/assets/stylesheets/bootstrap';
+
+// Base-theme overrides.
+@import 'drupal-bootstrap';
+
+// Component Styling
+@import 'components/dgi_header/block-dgi_header';
+@import 'components/page/page-node_type-islandora_object';
+@import "components/solr-list-display/solr-list-display";
+@import 'components/solr-grid-display/solr-grid-display';
+@import 'components/solr-list-grid-header/solr-list-grid-header';
+@import 'components/solr-list-grid-footer/solr-list-grid-footer';
+@import "components/about/about";
+@import "components/front-page-view/front-page-view";
+@import "components/dgi-footer-block/dgi-footer-block";
+@import "components/search-facet-blocks/search-facet-blocks";
+@import "components/user-login/user-login";
+@import "components/search-autocomplete/autocomplete_suggestions";
+@import "components/expand-collapse-formatter/expand-collapse-formatter";
+@import "components/footer/footer";
+@import "components/dgi-general-layout/page-structure";
+@import "components/page/page-front";
+@import "components/dgi-advanced-search/dgi-advanced-search";
+@import "components/cookie-compliance/cookie-compliance";
+@import "components/block/block-dgi-footer-logo";
+@import "components/block/dgi-footer-menus";
+@import "components/block/login-signup";
+@import "components/block/language-switcher-dropdown";
+@import "components/block/block-social-media-menu";
+@import "components/block/copyright";
+@import "components/block/add-to-any";
+@import "components/recent-uploads/recent-uploads";
+@import "components/block/latest-update";
+@import "components/block/block-sidebar-links";
+@import "components/block/browse-by-type";
+@import "components/block/ir-breakdown";
+@import "components/block/media-download";
+@import "components/block/technical-metadata";
+@import "components/block/view-node-counts";
+@import "components/content-counts/content-counts";
+@import "components/page/page-item-list";
+@import "components/collection_rep_img/collection_rep_image";
+@import "components/breadcrumb/breadcrumb";
+@import "components/page/page-collection";
+@import "components/block/keywords";
+@import "components/block/related-items";
+@import "components/block/external-references";
+@import "components/block/cite-as";
+@import "components/page/page-research-output";
+@import "components/repository_item_metadata/repository-item-metadata";
+@import "components/block/views-file-download";
+@import "components/popover/popover";
+@import "components/block/dgi-views-search-form-block";
+@import "components/block/representative-image";
+@import "components/selectboxit/selectboxit";
+@import "components/spinner/spinner";
+@import "components/common/elements/checkbox";
+@import "components/autocomplete/autocomplete";
+@import "components/toolbar/gin-toolbar";
+@import "components/block/split-sidebar-media-query";
+@import "components/gin-overrides/gin-overrides";
+@import "components/block/filter-collections";

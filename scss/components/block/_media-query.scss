@@ -1,0 +1,221 @@
+/**
+ * Media queries for blocks and container components.
+ */
+
+.not-front {
+  .block-dgi-header {
+    &.dgi-header-max-height {
+      .container.row.form-group {
+        .form-group {
+          // Manual override here to get the header search to align with
+          // the menus, given the requirement of the width of the search bar,
+          // it could overlap with the menu items when switching 'position'
+          // property.
+          @media #{"screen and (min-width: 1350px)"} {
+            &.end-container {
+              position: absolute;
+              left: 0;
+              right: 0;
+              width: 100%;
+              text-align: center;
+              justify-content: center;
+              padding-bottom: inherit;
+              padding-right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.block-dgi-header {
+  &.dgi-header-max-height {
+    .container.row.form-group {
+      .form-group {
+        @media #{$mobile} {
+          justify-content: right;
+
+          &.nav-links {
+            padding-bottom: 1.5rem;
+          }
+
+          &.end-container {
+            padding-bottom: 1.5rem;
+
+            .upload.btn {
+              margin-left: 1.5rem;
+            }
+
+            .form-group.form-type-textfield {
+              padding-left: 0;
+            }
+          }
+
+          &.start-container {
+            justify-content: center;
+
+            a.logo {
+              img {
+                margin-top: 1.8rem;
+                margin-bottom: 2rem;
+                padding-right: 0;
+              }
+            }
+          }
+        }
+
+        @media #{$tablet} {
+          justify-content: inherit;
+
+          &.start-container {
+            justify-content: left;
+
+            a.logo {
+              img {
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+                padding-top: 0;
+                padding-bottom: 0;
+              }
+            }
+          }
+
+          &.nav-links {
+            justify-content: center;
+            padding: 0;
+          }
+
+          &.end-container {
+            padding-bottom: inherit;
+            justify-content: flex-start;
+            padding-right: 0px;
+
+            .user-info.login.logout {
+              padding-right: 0;
+            }
+
+            .form-group.form-type-textfield {
+              padding-left: 0;
+            }
+          }
+        }
+
+        @media #{$normal} {
+          justify-content: inherit;
+
+          &.start-container {
+            justify-content: left;
+
+            a.logo {
+              img {
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+                padding-top: 0;
+                padding-bottom: 0;
+              }
+            }
+          }
+
+          &.nav-links {
+            justify-content: center;
+            padding: 0;
+          }
+
+          &.end-container {
+            padding-bottom: inherit;
+            justify-content: flex-start;
+            padding-right: 0px;
+          }
+        }
+
+        @media #{$wide} {
+          justify-content: inherit;
+
+          &.start-container {
+            justify-content: left;
+
+            a.logo {
+              img {
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+                padding-top: 0;
+                padding-bottom: 0;
+              }
+            }
+          }
+
+          &.nav-links {
+            justify-content: center;
+            padding: 0;
+          }
+
+          &.end-container {
+            padding-bottom: inherit;
+            justify-content: flex-start;
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.front-page {
+  @media #{$wide} {
+    .end-container {
+      padding-right: 0;
+
+      .user-info.login.logout {
+        padding-right: 0;
+      }
+    }
+  }
+  @media #{$normal} {
+    .end-container {
+      padding-right: 0;
+
+      .user-info.login.logout {
+        padding-right: 0;
+      }
+    }
+  }
+}
+.social-media-menu {
+  @media #{$mobile} {
+    ul.menu {
+      text-align: center !important;
+    }
+  }
+}
+
+.language-switcher {
+  @media #{$mobile} {
+    .dropdown-language-item {
+      float: right;
+    }
+  }
+}
+
+.copyright ul.menu li.first {
+  float: left;
+
+  @media #{$mobile} {
+    float: none !important;
+  }
+}
+
+// overriding default bootstrap responsive styles,
+// causing issues on screen resize.
+.navbar .logo {
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Override from line 60, scss/drupal-bootstrap/component/_navbar.scss */
+@media screen and (min-width: 768px) {
+  .navbar .logo {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,220 @@
+// Overriding Bootstrap container widths.
+body {
+  .container {
+    width: 100%;
+    max-width: $max-inner-page-width;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .main-page-content {
+    overflow-x: hidden;
+  }
+
+  &.page-node-type-islandora-object .solr-search-content footer .block {
+    margin-bottom: 1.5rem;
+  }
+
+  .region-sidebar-second {
+  .block,
+  nav,
+  .block-views {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &.path-user {
+    .form-item {
+      .label {
+        color: #333333;
+      }
+    }
+
+    .region.region-content,
+    aside {
+      padding: 0 10px;
+
+      .block-useraccountmenu-menu {
+        color: #333333;
+      }
+    }
+  }
+}
+
+// Set header to full width.
+header#navbar.navbar.container {
+  max-width: $outer-page-width;
+  width: $outer-page-width;
+  padding-left: 0;
+  padding-right: 0;
+
+  div.container.row {
+    max-width: $outer-page-width;
+    width: $outer-page-width;
+    position: relative;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Set main container to full width.
+// Set footer to full width.
+footer.footer.container,
+div.main-container.container {
+  max-width: $max-inner-page-width;
+  width: $outer-page-width;
+  padding: 0px;
+
+  // Set hero search image to full width.
+  .front-page-view {
+    img.img-responsive {
+      width: $outer-page-width;
+    }
+  }
+}
+
+footer {
+  &.footer.container {
+    padding: 0 15px;
+    margin-top: 3.5rem;
+  }
+}
+
+.not-front {
+  @media #{$tablet} {
+    margin-top: 0px;
+    .container {
+      .col-empty-padding {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+.not-front {
+  .block-dgi-header {
+    @media #{$tablet} {
+      padding: 0 $grid-gutter-width;
+    }
+
+    @media #{$mobile} {
+      padding: 0 $grid-gutter-width;
+    }
+
+    @media #{$wide} {
+      padding: 0 $grid-gutter-width;
+    }
+
+    @media #{$normal} {
+      padding: 0 $grid-gutter-width;
+    }
+  }
+
+  &.islandora-collection-grid,
+  &.islandora-collection-list {
+    .container {
+      .col-empty-padding {
+        @media #{$tablet} {
+          padding: 0 $grid-gutter-width-half;
+        }
+
+        @media #{$mobile} {
+          padding: 0 $grid-gutter-width-half;
+        }
+
+        @media #{$wide} {
+          padding: 0 $grid-gutter-width-half;
+        }
+
+        @media #{$normal} {
+          padding: 0 $grid-gutter-width-half;
+        }
+      }
+    }
+  }
+
+  .container {
+    .col-empty-padding {
+      @media #{$tablet} {
+        padding: 0 $grid-gutter-width;
+      }
+
+      @media #{$mobile} {
+        padding: 0 $grid-gutter-width-tablet;
+      }
+
+      @media #{$wide} {
+        padding: 0 $grid-gutter-width;
+      }
+
+      @media #{$normal} {
+        padding: 0 $grid-gutter-width;
+      }
+    }
+
+    &.footer-content {
+      @media #{$tablet} {
+        padding: 0;
+      }
+
+      @media #{$mobile} {
+        padding: 0;
+      }
+
+      @media #{$wide} {
+        padding: 0;
+      }
+
+      @media #{$normal} {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.front-page {
+  .block-dgi-header .container.row.form-group,
+  .content-counts-block .block-content-outer {
+    @media #{$tablet} {
+      padding: 0 15px;
+      display: flex;
+
+      .end-container {
+        justify-content: flex-end !important;
+        padding-right: 17px !important;
+      }
+    }
+
+    @media #{$mobile} {
+      padding: 0 15px;
+      display: flex;
+    }
+
+    @media #{$wide} {
+      padding: 0 60px;
+      display: flex;
+
+      .end-container {
+        justify-content: flex-end !important;
+        padding-right: 0px !important;
+      }
+    }
+
+    @media #{$normal} {
+      padding: 0 60px;
+      display: flex;
+
+      .end-container {
+        justify-content: flex-end !important;
+        padding-right: 0px !important;
+      }
+    }
+  }
+}
+
+// Remove negative margin from .row.
+.row:not([class*=offset]) {
+  margin: 0px !important;
+}

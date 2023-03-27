@@ -1,0 +1,32 @@
+name: 'Custom Lomax Archive '
+description: 'Basic skinning for lomax archive'
+core: 8.x
+type: theme
+base theme: dgi_i8_base
+core_version_requirement: ^8 || ^9
+package: 'Bootstrap'
+regions:
+  navigation: Navigation
+  header: 'Top Bar'
+  header_left: 'Header Left'
+  header_center: 'Header Center'
+  header_right: 'Header Right'
+  sidr: Sidr
+  sidr_bottom: 'Sidr Bottom'
+  highlighted: Highlighted
+  help: Help
+  viewer: Viewer
+  content: Content
+  sidebar_first: Primary
+  sidebar_second: Secondary
+  pre_footer: 'Pre Footer'
+  footer: Footer
+  footer_bottom: 'Footer bottom'
+  page_top: 'Page top'
+  navigation_collapsible: "Navigation Collapsible"
+  navigation_collapsible_search: "Navigation: Collapsible Search"
+
+
+libraries:
+- 'custom_lda/global-styling'
+- 'custom_lda/fonts'

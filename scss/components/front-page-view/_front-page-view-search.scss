@@ -1,0 +1,106 @@
+/**
+ * Default Front-page view search component styling.
+ */
+@import "_media-query.scss";
+
+%field--name-field-display-block {
+  .exposed-search-form {
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    height: 375px;
+
+    form {
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      max-width: 664px; // Form max-width same as the input elements max width.
+    }
+  }
+
+  .block-title {
+    color: rgba($white-base, 1);
+    font-family: $font-family-basic;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 106px;
+    margin-top: 0px;
+    margin-bottom: 0;
+  }
+
+  .form-item {
+    &.form-item-search-api-fulltext {
+      width: 100%;
+      max-width: 768px;
+      margin: auto auto 24px auto;
+      position: relative;
+
+      &::before {
+        content: "\f002";
+        font-family: $font-awesome-version;
+        left: auto;
+        position: absolute;
+        padding-left: 25px;
+        color: $base-color-high;
+        font-size: 24px;
+        font-weight: 300;
+        -webkit-transition: color ease-in-out $transition-time;
+        -moz-transition: color ease-in-out $transition-time;
+        -ms-transition: color ease-in-out $transition-time;
+        -o-transition: color ease-in-out $transition-time;
+        transition: color ease-in-out $transition-time;
+      }
+
+      &.textfield-focused {
+        &::before {
+          color: $base-color;
+        }
+      }
+
+      input {
+        @extend %input-element-transition;
+        display: inline-block;
+        border-radius: 45px;
+        -webkit-background-size: 19px 20px;
+        background-size: 19px 20px;
+        background-repeat: no-repeat;
+        background-position: 25px center;
+        padding-left: 70px;
+        line-height: 32px;
+        font-size: 32px;
+        max-width: 664px;
+        width: 100%;
+      }
+    }
+  }
+
+  .form-actions {
+    &#edit-actions {
+      display: inline-block;
+
+      button {
+        margin-right: 6px;
+        vertical-align: top;
+        display: inline-block;
+        padding-top: 8px;
+        padding-left: 35px;
+      }
+
+      button, a {
+        @extend %large-button;
+
+        span {
+          &.glyphicon {
+            &::before {
+              font-size: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

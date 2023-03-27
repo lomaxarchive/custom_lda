@@ -1,0 +1,37 @@
+/**
+ * Media queries for the front page search box.
+ */
+
+.solr-search-content {
+  @media #{$mobile} {
+    .solr-search-row-content {
+      padding-left: 0;
+    }
+
+    .footer-content footer:not(.hidden) {
+      padding-right: 0px;
+    }
+  }
+
+  @media #{$tablet} {
+    .solr-search-row-content {
+      padding-left: 0;
+    }
+
+    .footer-content footer:not(.hidden) {
+      padding-right: 0px;
+    }
+  }
+
+  @media #{$normal} {
+    .solr-search-row-content {
+      padding-left: 15px;
+    }
+  }
+
+  @media #{$wide} {
+    .solr-search-row-content {
+      padding-left: 15px;
+    }
+  }
+}

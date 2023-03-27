@@ -1,0 +1,44 @@
+/**
+ * Media queries for the user content counts view component.
+ */
+
+.block-block-groupobject-page-split-sidebar {
+  @media #{$mobile} {
+    .technical-metadata {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0;
+    }
+
+    .dgi-download-block {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @media #{$tablet} {
+    .technical-metadata {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .dgi-download-block {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  @media #{$normal} {
+    .technical-metadata {
+      padding-left: 0;
+      padding-right: 15px;
+    }
+  }
+
+  @media #{$wide} {
+    .technical-metadata {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

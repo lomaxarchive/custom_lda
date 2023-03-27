@@ -1,0 +1,80 @@
+/**
+ * Default Front-page view styling.
+ */
+
+@import "front-page-view-search";
+
+body.front-page {
+  .highlighted {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  &.gin--vertical-toolbar:not(.toolbar-vertical) {
+    .highlighted {
+      width: calc(100% - 80px);
+    }
+    &.toolbar-fixed[data-toolbar-menu='open'] {
+      .highlighted {
+        width: calc(100% - 240px);
+      }
+    }
+  }
+}
+
+.front-page-view {
+  position: relative;
+
+  article {
+    >h2 {
+      display: none;
+    }
+
+    .field--type-image {
+      .field--item {
+        background-image: linear-gradient(270deg, #00436a 0%, #3663a8 100%);
+      }
+    }
+
+    .field--name-field-elevated-title {
+      position: absolute;
+      width: 100%;
+      margin: 3.5rem auto;
+
+      .field--item {
+        font-size: 34px;
+        font-weight: bold;
+        line-height: 40px;
+        color: #43474A;
+        text-align: center;
+      }
+    }
+
+    .field--name-field-display-block-images {
+      .field--items,
+      .field--item {
+        height: 100%;
+
+        img {
+          min-width: 100%;
+          min-height: 800px; // When shorter than this, elements overlap.
+          object-fit: cover;
+          width: 100%;
+          height: 100vh;
+          object-position: bottom;
+        }
+      }
+    }
+
+    .form-type-select {
+      .select-wrapper {
+        display: none;
+      }
+    }
+
+    .field--name-field-display-block {
+      @extend %field--name-field-display-block;
+    }
+  }
+}

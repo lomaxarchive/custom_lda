@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: (optional) Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('top-display-person') }}>
+    {{ title_prefix }}
+    {% if content.field_person_preferred_name|render|striptags %}
+    <h2>{{ content.field_person_preferred_name }}</h2>
+    {% else %}
+    <h2>{{ name }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    <div>
+          {% if content.field_person_alternate_names|render|striptags %}
+        <strong>Also known as:</strong> {{ content.field_person_alternate_names.0 }}
+         {% endif %}
+        {% if content.field_cat_date_begin|render|striptags %}
+        <div>
+        {{ content.field_cat_date_begin.0 }} - {{ content.field_cat_date_end.0 }}
+        </div>
+        {% endif %}
+        <div class="bio clearfix">
+        <div class="bio-image">
+        {{ content.field_photo }}
+        </div>
+        <div>
+            {{ content.description }}
+        </div>
+
+        </div>   
+        
+        {% if content.field_relationships|render|striptags %}
+        <div class="person-associated">
+        <strong>Associated with:</strong> {{ content.field_relationships }}
+        </div>
+        {% endif %}
+          {% if content.field_authority_link|render|striptags %}
+        <strong>LC Name Source:</strong> {{ content.field_authority_link.0 }}<br>
+        {% endif %}
+    </div>
+    </div>

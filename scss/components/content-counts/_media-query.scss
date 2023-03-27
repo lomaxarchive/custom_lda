@@ -1,0 +1,165 @@
+/**
+ * Media queries for the user content counts view component.
+ */
+
+.content-counts-block {
+  @media #{$mobile} {
+    .form-group {
+      .contextual-region {
+        >div.views-row {
+          text-align: center;
+        }
+      }
+    }
+
+    .attachment-container,
+    div.views-row {
+      text-align: center;
+
+      div.views-element-container {
+        padding-left: 0;
+      }
+
+      .views-field-nid-1 {
+        padding: 15px 0 5px 0;
+      }
+    }
+
+    .attachment-container {
+      width: 100%;
+      text-align: center;
+      float: none;
+      padding-bottom: 15px;
+
+      div.views-element-container {
+        .field-content {
+          &::before {
+            content: " ";
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 8px;
+            vertical-align: middle;
+            margin-right: 9px;
+            margin-bottom: 3px;
+          }
+        }
+      }
+    }
+
+    .views-element-container,
+    .views-row {
+      width: 100%;
+    }
+  }
+
+  @media #{$tablet} {
+    .form-group .contextual-region > div.views-row {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .attachment-container {
+      width: 100%;
+      display: inline-block;
+      font-size: 0;
+      border: none;
+      float: none;
+      text-align: center;
+
+      div.views-element-container:not(:first-child) {
+        padding-left: 26px;
+      }
+    }
+
+    .attachment-container {
+      div.views-element-container:not(:first-child) {
+        .field-content {
+          &::before {
+            content: " ";
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 8px;
+            vertical-align: middle;
+            margin-right: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$normal} {
+    .attachment-container {
+      width: 75%;
+      display: inline-block;
+      font-size: 0;
+      border: none;
+      float: right;
+      text-align: right;
+
+      div.views-element-container:not(:first-child) {
+        padding-left: 26px;
+      }
+    }
+
+    .form-group .contextual-region > div.views-row {
+      width: auto;
+    }
+
+    .attachment-container {
+      div.views-element-container:not(:first-child) {
+        .field-content {
+          &::before {
+            content: " ";
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 8px;
+            vertical-align: middle;
+            margin-right: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$wide} {
+    .attachment-container {
+      width: 55%;
+      display: inline-block;
+      font-size: 0;
+      border: none;
+      float: right;
+      text-align: right;
+
+      div.views-element-container:not(:first-child) {
+        padding-left: 26px;
+      }
+    }
+
+    .form-group .contextual-region > div.views-row {
+      width: auto;
+    }
+
+    .attachment-container {
+      div.views-element-container:not(:first-child) {
+        .field-content {
+          &::before {
+            content: " ";
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 8px;
+            vertical-align: middle;
+            margin-right: 26px;
+          }
+        }
+      }
+    }
+  }
+}
