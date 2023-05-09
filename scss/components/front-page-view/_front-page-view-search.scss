@@ -93,6 +93,10 @@
       button, a {
         @extend %large-button;
 
+        &.btn-explore {
+          display: inline-block;
+        }
+
         span {
           &.glyphicon {
             &::before {

@@ -1,10 +1,11 @@
 <?php
+use Drupal\Core\Url;
+use Drupal\bootstrap\Bootstrap;
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter for blocks.
  */
 function custom_lda_theme_suggestions_block_alter(&$suggestions, $variables) {
-
   // Load theme suggestions for blocks from parent theme.
   foreach ($suggestions as &$suggestion) {
     $suggestion = str_replace('custom_lda_', 'dgi_i8_base_', $suggestion);
@@ -19,29 +20,58 @@ function custom_lda_preprocess_html(&$variables) {
   }
 }
 
+/**
+* Implements hook_preprocess_page().
+*/
+function custom_lda_preprocess_page(&$variables) {
+ // Check if is admin route.
+ $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
 
+ // Get current node.
+ $node = \Drupal::request()->attributes->get('node');
 
- /**
- * Implements hook_preprocess_page().
- */
- function custom_lda_preprocess_page(&$variables) {
-   // Check if is admin route.
-   $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
+ // Get all content types saved on fullpagejs config.
+ $content_types =  \Drupal::config('fullpagejs.settings')->get('drupalContentTypes');
 
-   // Get current node.
-   $node = \Drupal::request()->attributes->get('node');
+ if(!$is_admin && $node && $content_types) {
 
-   // Get all content types saved on fullpagejs config.
-   $content_types =  \Drupal::config('fullpagejs.settings')->get('drupalContentTypes');
+   // Get node content type.
+   $node_type = strval($node->getType());
 
-   if(!$is_admin && $node && $content_types) {
+   if($node_type === $content_types[$node_type]) {
 
-     // Get node content type.
-     $node_type = strval($node->getType());
-
-     if($node_type === $content_types[$node_type]) {
-
-       $variables['#attached']['library'][] = 'custom_lda/fullpagejs-extensions';
-     }
+     $variables['#attached']['library'][] = 'custom_lda/fullpagejs-extensions';
    }
+ }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function custom_lda_form_views_exposed_form_alter(array &$form, &$form_state, $form_id) {
+  $view = $form_state->getStorage('view');
+  $view_id = $view['view']->id();
+
+  if ($view_id == 'solr_search_content' && \Drupal::service('path.matcher')->isFrontPage()) {
+    $form['actions']['explore_collections'] = [
+      '#type' => 'link',
+      '#url' => Url::fromUri("internal:/collections", [
+        'query' => [
+          'search_api_fulltext' => '',
+          'member_of_op' => 'empty',
+        ],
+      ]),
+      '#title' => t("Explore"),
+      '#attributes' => [
+        'class' => [
+          'btn',
+          'btn-primary',
+          'btn-explore',
+        ],
+      ],
+      '#weight' => 100,
+    ];
+    $form['#cache']['context'][] = 'url.path.is_front';
   }
+}
+
