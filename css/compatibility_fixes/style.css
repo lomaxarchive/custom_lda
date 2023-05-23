@@ -1,0 +1,46 @@
+/**
+* Compatiblity fixes for this subtheme for use with the latest
+* version of the dgi_i8_base theme.
+*/
+
+.path-solr-search .solr-search-content--list .table > tbody > tr:nth-of-type(2n+1) {
+    background-color: #ffffff;
+}
+
+.block-dgi-header.dgi-header-max-height div.container div.start-container a.logo {
+    margin-top: 0;
+}
+
+body.not-front #navbar .mobile-toggle-wrapper #block-dgiviewsearchform.block-dgi-header.block-dgi-view-search-form button,
+body.not-front .block-dgi-header:not(.block-dgi-user-info) .form > form.dgi-header-search-form button {
+    top: 0;
+}
+
+body.front-page .front-page-view article .field--name-field-display-block .form-actions[id^="edit-actions"] {
+    max-width: 100%;
+    margin-top: 2rem;
+}
+
+body.path-frontpage .form-item.form-item-search-api-fulltext input.form-autocomplete,
+body.path-frontpage .form-item.form-item-search-api-fulltext .form-text.form-control,
+body.path-frontpage .form-item.form-item-search-api-fulltext .js input.form-text.form-autocomplete,
+body.path-frontpage .js .form-item.form-item-search-api-fulltext input.form-text.form-autocomplete,
+body.path-frontpage .form-item.form-type-textfield.form-item-terms input.form-autocomplete,
+body.path-frontpage .form-item.form-type-textfield.form-item-terms .form-text.form-control,
+body.path-frontpage .form-item.form-type-textfield.form-item-terms .js input.form-text.form-autocomplete,
+body.path-frontpage .js .form-item.form-type-textfield.form-item-terms input.form-text.form-autocomplete {
+    height: 68px !important;
+    border-top-right-radius: 45px !important;
+}
+
+@media screen and (max-width: 766px) {
+    body.path-solr-search .solr-search-content footer {
+        width: 100%;
+    }
+}
+
+/*@media screen and (min-width: 767px) {*/
+/*    body.path-solr-search .solr-search-content footer {*/
+/*        width: 250px;*/
+/*    }*/
+/*}*/

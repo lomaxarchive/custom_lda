@@ -2,6 +2,8 @@
 use Drupal\Core\Url;
 use Drupal\bootstrap\Bootstrap;
 
+use function getParameter as getParameterAlias;
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter for blocks.
  */
@@ -12,6 +14,9 @@ function custom_lda_theme_suggestions_block_alter(&$suggestions, $variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_html().
+ */
 function custom_lda_preprocess_html(&$variables) {
   // Add node ID to the body class.
   $node = \Drupal::routeMatch()->getParameter('node');
@@ -24,25 +29,22 @@ function custom_lda_preprocess_html(&$variables) {
 * Implements hook_preprocess_page().
 */
 function custom_lda_preprocess_page(&$variables) {
- // Check if is admin route.
- $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
+  // Check if is admin route.
+  $is_admin = \Drupal::service('router.admin_context')->isAdminRoute();
 
- // Get current node.
- $node = \Drupal::request()->attributes->get('node');
+  // Get current node.
+  $node = \Drupal::request()->attributes->get('node');
 
- // Get all content types saved on fullpagejs config.
- $content_types =  \Drupal::config('fullpagejs.settings')->get('drupalContentTypes');
+  // Get all content types saved on fullpagejs config.
+  $content_types =  \Drupal::config('fullpagejs.settings')->get('drupalContentTypes');
 
- if(!$is_admin && $node && $content_types) {
-
-   // Get node content type.
-   $node_type = strval($node->getType());
-
-   if($node_type === $content_types[$node_type]) {
-
-     $variables['#attached']['library'][] = 'custom_lda/fullpagejs-extensions';
-   }
- }
+  if(!$is_admin && $node && $content_types) {
+    // Get node content type.
+    $node_type = strval($node->getType());
+    if($node_type === $content_types[$node_type]) {
+      $variables['#attached']['library'][] = 'custom_lda/fullpagejs-extensions';
+    }
+  }
 }
 
 /**

@@ -1,19 +1,19 @@
 global-styling:
-    css:
-        theme:
-            css/style.css: {}
+  css:
+    theme:
+      #scss/style.scss: {}
+      css/style.css: {}
+      css/compatibility_fixes/style.css: {}
 
 fonts:
-    css:
-        theme:
-            '//fonts.googleapis.com/css?family=Roboto:400,400i,700,700i': { type: external, minified: true }
-            '//fonts.googleapis.com/css2?family=Calistoga&display=swap': { type: external, minified: true }
-            '//fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap' : { type: external, minified: true }
-
-    dependencies:    
-        - core/drupal.dialog.ajax #Required for dialogs
-        - core/jquery.once
-
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Roboto:400,400i,700,700i': { type: external, minified: true }
+      '//fonts.googleapis.com/css2?family=Calistoga&display=swap': { type: external, minified: true }
+      '//fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap' : { type: external, minified: true }
+  dependencies:
+    - core/drupal.dialog.ajax #Required for dialogs
+    - core/jquery.once
 
 fullpagejs-extensions:
   remote: https://github.com/alvarotrigo/fullPage.js/
@@ -27,4 +27,3 @@ fullpagejs-extensions:
     js/scrolloverflow.min.js: { weight: -5 }
     dependencies:
       - fullpagejs/fullpagejs
-
