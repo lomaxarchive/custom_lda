@@ -11,31 +11,45 @@
     left: 0;
     bottom: 0;
     right: 0;
-    text-align: center;
-    height: 375px;
+    height: 225px;
 
     form {
       margin-left: auto;
       margin-right: auto;
       position: relative;
-      max-width: 664px; // Form max-width same as the input elements max width.
+      max-width: 100%;
     }
   }
 
   .block-title {
-    color: rgba($white-base, 1);
+    color: rgba($fp-title-color, 1);
     font-family: $font-family-basic;
-    font-size: 48px;
-    font-weight: 200;
-    line-height: 106px;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 90px;
     margin-top: 0px;
+    letter-spacing: -0.01em;
     margin-bottom: 0;
   }
 
+  h2,
+  .sub-title {
+    color: $white-base;
+    font-family: $font-family-basic;
+    font-weight: 200;
+    margin: 15px auto;
+  }
+
   .form-item {
-    &.form-item-search-api-fulltext {
-      width: 100%;
-      max-width: 768px;
+    &.form-item-member-of-value {
+      display: none !important;
+    }
+
+    &.form-item-search-api-fulltext.form-type-textfield,
+    &.form-type-textfield.form-item-terms {
+      display: inline-block;
+      max-width: 635px;
+      width: 64%;
       margin: auto auto 24px auto;
       position: relative;
 
@@ -46,7 +60,7 @@
         position: absolute;
         padding-left: 25px;
         color: $base-color-high;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 300;
         -webkit-transition: color ease-in-out $transition-time;
         -moz-transition: color ease-in-out $transition-time;
@@ -72,30 +86,35 @@
         padding-left: 70px;
         line-height: 32px;
         font-size: 32px;
-        max-width: 664px;
+        max-width: 620px;
+        border-top-right-radius: 45px !important;
+        border-top-left-radius: 45px !important;
         width: 100%;
       }
     }
   }
 
   .form-actions {
-    &#edit-actions {
+    &[id^="edit-actions"] {
       display: inline-block;
+      max-width: 100%;
+      width: 100%;
+      vertical-align: top;
+      margin-top: 2.5rem;
 
       button {
         margin-right: 6px;
         vertical-align: top;
         display: inline-block;
-        padding-top: 8px;
-        padding-left: 35px;
+        padding: 8px 30px;
+        height: 48px;
+        border-radius: 24px;
+        font-size: 20px;
+        max-width: 100%;
       }
 
       button, a {
         @extend %large-button;
-
-        &.btn-explore {
-          display: inline-block;
-        }
 
         span {
           &.glyphicon {

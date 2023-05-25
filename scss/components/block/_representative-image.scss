@@ -1,5 +1,5 @@
 .view-collection-representative-object {
-  height: 364px;
+  height: 550px;
   background-color: rgba($collection-header-bg, .8);
 
   > div.view-content,
@@ -15,7 +15,7 @@
         .views-field-rendered-entity {
           .field--name-field-media-image {
             img {
-              height: 364px;
+              height: 550px;
               object-fit: cover;
               width: 100%;
             }
@@ -55,7 +55,7 @@
 
         .rep-obj-basic-data {
           padding-left: 30px;
-          height: 364px;
+          height: 550px;
           margin-top: 0;
           position: relative;
 
@@ -67,6 +67,10 @@
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
 
+            a {
+              color: $white-base;
+            }
+
             .last-updated {
               color: $white-base;
               font-family: $font-family-elevated;
@@ -75,14 +79,24 @@
               line-height: 43px;
               padding-bottom: 15px;
             }
+              
+             .session-info {
+              color: $white-base;
+              font-family: $font-family-elevated;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 25px;
+              margin-bottom: 15px;
+              border-bottom: 1px solid;
+            }
 
             .description {
               color: $white-base;
-              font-family: $font-family-basic;
+              font-family: $font-family-elevated;
               font-size: 16px;
               font-weight: 500;
               line-height: 28px;
-              max-width: 60%;
+              max-width: 80%;
             }
           }
         }
@@ -109,9 +123,9 @@
                 vertical-align: middle;
                 line-height: 29px;
                 border-radius: 2px;
-                border: 1px solid rgba($base-color, 0.1);
+                border: 1px solid $base-color-tenth;
                 background-color: $off-white-base;
-                color: rgba($base-color, 0.75);
+                color: $base-color-high;
                 font-family: $font-family-elevated;
                 font-size: 12px;
                 font-weight: 500;
@@ -133,7 +147,7 @@
                 }
 
                 &:hover {
-                  background-color: rgba($base-color, 0.75);
+                  background-color: $base-color-high;
                   color: $white-base;
                   text-decoration: none;
                 }
@@ -234,9 +248,9 @@
             transform: none !important;
 
             .description {
-              max-height: 140px;
+              max-height: 250px;
               text-overflow: ellipsis;
-              overflow-y: hidden;
+              overflow-y: scroll;
               max-width: 100% !important;
               width: 100%;
             }
@@ -308,9 +322,9 @@
         width: 100%;
 
         .description {
-          max-height: 115px;
+          max-height: 250px;
           text-overflow: ellipsis;
-          overflow-y: hidden;
+          overflow-y: scroll;
           max-width: 100% !important;
         }
       }
@@ -318,14 +332,14 @@
 
     @media #{$normal} {
       .views-field-nothing-1 .rep-obj-basic-data .rep-obj-basic-data--inner .description {
-        max-width: 60% !important;
+        max-width: 80% !important;
         width: 100%;
       }
     }
 
     @media #{$wide} {
       .views-field-nothing-1 .rep-obj-basic-data .rep-obj-basic-data--inner .description {
-        max-width: 60% !important;
+        max-width: 80% !important;
         width: 100%;
       }
     }

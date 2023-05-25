@@ -1,27 +1,8 @@
-.add-to-any-block,
-.block-addtoany-block {
-  background-color: #f2f2f4;
-  text-align: left;
-  padding: ($grid-gutter-width / 2);
-
-  .block-title {
-    margin: 0px;
-  }
-
-  &.view {
-    @extend %view-latest-update-view-display;
-  }
-
-  .addtoany_list {
-    line-height: 60px;
-    text-align: center;
-    width: 100%;
-    overflow: auto;
-    display: table;
-    table-layout: fixed;
-
-    a {
-      display: table-cell;
-    }
+body.path-node {
+  .add-to-any-block,
+  .block-addtoany-block {
+    background-color: #f2f2f4;
+    border-radius: 20px;
+    padding-top: 5px;
   }
 }

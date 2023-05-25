@@ -1,0 +1,123 @@
+.content.explore-page {
+    background:linear-gradient(0deg, #647c87a8,#647c87e8), url(/sites/default/files/images/back.jpg);
+     background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding-left: 13.3%;
+    padding-right: 13.3%;
+    margin-left: -17px;
+    margin-right: -17px;
+    margin-bottom: -24px;
+    padding-bottom: 24px;
+    padding-top: 5rem;
+}
+
+
+.mcol-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 3rem 1rem;
+    justify-items: center;
+}
+
+.mcol {
+    background-size: cover;
+    BACKGROUND-POSITION: BOTTOM RIGHT;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+}
+
+
+.mcol a {
+    font-family: $font-family-basic;
+    color: white;
+}
+
+.mcol a:hover {
+    text-decoration: none;
+}
+
+.mcol-text {
+    font-family: $font-family-basic;
+    font-size: 3em;
+    line-height: 1.5em;
+    color: white;
+    text-align: left;
+    padding-right: 5%;
+    padding-left: 5%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    backdrop-filter: brightness(63%) saturate(80%) contrast(100%);
+    -webkit-backdrop-filter: brightness(63%) saturate(80%) contrast(100%);
+
+}
+
+.mcol-text:hover {
+    backdrop-filter: blur(5px) contrast(0.5);
+    -webkit-backdrop-filter: brightness(63%) saturate(80%) contrast(100%);
+}
+
+.mcol:nth-child(4n+2) {
+    border-radius: 0px 50px 0px 0px;
+
+}
+
+.mcol:nth-child(4n+3) {
+    border-radius: 0px 0px 0px 50px;
+
+}
+
+.mcol:nth-child(4n+1) {
+    border-radius: 50px 00px 0px 0px;
+}
+
+.mcol:nth-child(4n+4) {
+    border-radius: 0px 0px 50px 0px;
+}
+
+.mcol-2-text {
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
+.mcol-2-text h2 {
+    font-family: $font-family-basic;
+    color: white;
+}
+
+.mcol-2-text a {
+    font-family: $font-family-elevated;
+    color: white;
+}
+
+
+.ex-teaser {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2em 1em;
+}
+.ex-teaser-image {grid-area: 1;}
+.ex-teaser-description {grid-area: 1 / 2 / 2 / 3;}
+
+
+
+.ex-teaser-image img {
+  padding-top:3rem;
+    max-height: 100%;
+    }
+
+
+.ex-teaser h3 {
+  line-height: auto;
+  font-size: 1.5em;
+}
+
+.ex-teaser p {
+  line-height: 1.5em;
+  text-align: justify;
+}

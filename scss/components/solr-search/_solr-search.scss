@@ -1,0 +1,32 @@
+/**
+ * solr search related modifications.
+ */
+
+.path-solr-search.not-front {
+  .solr-search-content footer .block-block-groupsearch-facet-header section:not(.block-dgi-view-search-form) {
+    .facets-widget-checkbox ul {
+      padding: 9px 15px 0 15px;
+    }
+  }
+
+  .solr-search-content--grid .views-row .views-field.views-field-title .field-content {
+    min-height: 6rem;
+  }
+
+  .view-solr-grid-display .views-row .views-field-field-model,
+  .solr-search-content--grid .views-row .views-field-field-model {
+    text-align: center;
+
+    .field-content {
+      border-radius: 10px;
+      background-color: rgba(49,56,66,0.9);
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.58px;
+      line-height: 14px;
+      padding: 2px 8px;
+    }
+  }
+
+}
