@@ -14,7 +14,7 @@
 
 .mainpage .content h2,
 .mainpage .content h3 {
-  font-family: Calistoga;
+  font-family: $font-family-basic;
   font-size: 2em;
 }
 
@@ -78,8 +78,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  //backdrop-filter: brightness(63%) saturate(80%) contrast(100%);
-  //-webkit-backdrop-filter: brightness(63%) saturate(80%) contrast(100%);
 }
 
 .mcol-text:hover {
