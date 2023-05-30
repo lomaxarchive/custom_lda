@@ -5,3 +5,44 @@ body.page-node-type-islandora-object {
     }
   }
 }
+
+.islandora-collection,
+.islandora-collection-grid,
+.islandora-collection-list {
+  background-color: #2e3944;
+}
+
+.solr-search-content header,
+.solr-search-content .view-header {
+  height: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+}
+
+.islandora-collection,
+.islandora-collection-grid,
+.islandora-collection-list {
+  .solr-search-content header::before,
+  .solr-search-content .view-header::before,
+  .solr-search-content header::after,
+  .solr-search-content .view-header::after{
+    background-color: transparent;
+  }
+
+  .solr-search-content header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .solr-search-content .container.footer-content {
+    position: relative;
+    min-height: 3em;
+    margin-bottom: 15px;
+    border-radius: 0 0 4px 4px;
+    margin-top: -4px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

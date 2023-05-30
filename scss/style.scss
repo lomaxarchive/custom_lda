@@ -15,6 +15,14 @@
 @import "components/page/page-item-list";
 @import 'components/page/page-node_type-islandora_object';
 @import 'components/solr-search/solr-search';
+@import 'components/breadcrumbs/breadcrumbs';
+@import 'components/mainpage-exhibit/mainpage-exhibit';
+@import 'components/exhibits/exhibits';
+@import 'components/node-targets/node-targets';
+@import 'components/page/misc';
+@import 'components/page/icon-references';
+@import 'components/page/charts';
+@import 'components/page/page';
 
 // Custom client supplied scss.
 @import "components/main-collection/_main-collection";

@@ -1,8 +1,7 @@
 global-styling:
   css:
     theme:
-      scss/style.scss: { }
-      css/style.css: { }
+      scss/style.scss: {}
 fonts:
   css:
     theme:
@@ -23,8 +22,10 @@ fullpagejs-extensions:
     gpl-compatible: true
   js:
     js/scrolloverflow.min.js: { weight: -5 }
-    dependencies:
-      - fullpagejs/fullpagejs
+  dependencies:
+    - fullpagejs/fullpagejs
+    - core/jquery
+    - core/jquery.once
 
 color.preview:
   version: VERSION

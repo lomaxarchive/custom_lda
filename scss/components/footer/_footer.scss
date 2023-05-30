@@ -141,6 +141,26 @@ footer.footer.container {
   }
 }
 
+.mainpage footer.footer.container,
+.browseby-page footer.footer.container {
+  padding-left: 13.3%;
+  padding-right: 13.3%;
+}
+
+footer.footer.container {
+  margin-top: 2.5rem;
+}
+
+footer.footer.container, div.main-container.container {
+  max-width: 100%;
+  width: 100%;
+}
+
+footer.footer.container .footer-wrapper {
+  background-color: transparent;
+  border-top: solid 1px #e9e9e9;
+}
+
 ul.menu.menu--footer.nav {
     float: right;
     display: inline-flex;

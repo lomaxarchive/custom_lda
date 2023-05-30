@@ -1,0 +1,59 @@
+.bio-image {
+  max-width: 33.33%;
+  float: left;
+  padding: 10px 20px 20px 0px;
+}
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Collection::before {
+  padding-right: .75rem;
+  content: "\f8a0";
+  font-family: $font-awesome-version;
+  font-size: 14px;
+  font-weight: 400 !important;
+  line-height: 28px;
+}
+
+.Image::before {
+  padding-right: .75rem;
+  content: "\f083";
+  font-family: $font-awesome-version;
+  font-size: 14px;
+  font-weight: 400 !important;
+  line-height: 28px;
+}
+
+.Video::before {
+  padding-right: .75rem;
+  content: "\f03d";
+  font-family: $font-awesome-version;
+  font-size: 14px;
+  font-weight: 400 !important;
+  line-height: 28px;
+}
+
+.Audio::before {
+  padding-right: .75rem;
+  content: "\f001";
+  font-family: $font-awesome-version;
+  font-size: 14px;
+  font-weight: 400 !important;
+  line-height: 28px;
+}
+
+.block-sidebar-menu .view-content .item-list ul li span.field-content a::before,
+.block-latest-collections .view-content .item-list ul li span.field-content a::before {
+  padding-right: .75rem;
+  content: "\f5fd";
+  font-family: $font-awesome-version;
+  font-size: 14px;
+  font-weight: 400 !important;
+  line-height: 28px;
+}

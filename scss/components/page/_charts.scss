@@ -1,0 +1,11 @@
+.block-ir-breakdown,
+.block-donut-chart {
+  background-color: #f2f2f4;
+}
+
+.block-ir-breakdown .view-content,
+.block-donut-chart .view-content {
+  margin: 1rem;
+  background-color: white;
+  max-height: 155px !important;
+}

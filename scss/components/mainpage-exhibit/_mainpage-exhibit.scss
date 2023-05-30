@@ -1,0 +1,37 @@
+.mainpage {
+  min-height: 100vh;
+  background: url("/sites/default/files/images/site_bg.jpg");
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-attachment: scroll;
+  background-size: auto;
+  background-size: cover;
+  background-position: center;
+
+  &.exhibit-basic-page {
+    box-shadow: inset 0 0 0 2000px rgba(73,112,104,0.8);
+    background-attachment: fixed;
+
+    .content {
+      color: #fab785;
+    }
+  }
+
+  #edit-terms {
+    background: #ffffff6e;
+  }
+
+  .content {
+    padding-left: 13.3%;
+    padding-right: 13.3%;
+    margin-left: -17px;
+    margin-right: -17px;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    font-family: Lora,sans-serif,Helvetica,Arial;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    min-height: calc(100vh - 200px);
+  }
+
+}
