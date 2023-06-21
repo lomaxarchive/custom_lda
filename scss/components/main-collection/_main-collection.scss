@@ -1,5 +1,6 @@
 .content.explore-page {
-    background:linear-gradient(0deg, #647c87a8,#647c87e8), url(/sites/default/files/images/back.jpg);
+    z-index: 4000;
+    background:linear-gradient(0deg, #647c87a8,#647c87e8), url(../../../sites/default/files/images/back.jpg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
