@@ -1,5 +1,6 @@
 .content.explore-page {
-    background:linear-gradient(0deg, #647c87a8,#647c87e8), url(/sites/default/files/images/back.jpg);
+    z-index: 4000;
+    background:linear-gradient(0deg, #647c87a8,#647c87e8), url(../../../sites/default/files/images/back.jpg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -14,7 +15,7 @@
 
 .mainpage .content h2,
 .mainpage .content h3 {
-  font-family: Calistoga;
+  font-family: $font-family-basic;
   font-size: 2em;
 }
 
@@ -78,8 +79,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  //backdrop-filter: brightness(63%) saturate(80%) contrast(100%);
-  //-webkit-backdrop-filter: brightness(63%) saturate(80%) contrast(100%);
 }
 
 .mcol-text:hover {

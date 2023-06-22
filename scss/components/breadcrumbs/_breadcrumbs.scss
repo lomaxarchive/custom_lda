@@ -25,7 +25,7 @@
   -webkit-font-smoothing: antialiased;
   font-family: Calistoga;
   content: "»";
-  color: #fafafa;
+  color: $off-white-base;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.56px;
@@ -35,7 +35,7 @@
 .breadcrumb-wrapper .breadcrumb li {
   font-family: Calistoga;
   font-size: 16px;
-  color: white;
+  color: $white-base;
   font-weight: 400;
   max-width: 30%;
   text-overflow: ellipsis;
@@ -70,7 +70,7 @@
 .breadcrumb-wrapper .breadcrumb li a {
   font-size: 1em;
   line-height: normal;
-  color: #ffffff;
+  color: $white-base;
   vertical-align: middle;
 }
 
