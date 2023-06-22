@@ -1,0 +1,12 @@
+{
+    "name": "lomaxarchive/custom_lda",
+    "description": "",
+    "homepage": "https://github.com/lomaxarchive/embargo",
+    "type": "drupal-theme",
+    "license": "GPL-2.0-or-later",
+    "require": {
+      "discoverygarden/dgi_i8_base": "^3"
+    },
+    "require-dev": {
+    }
+}

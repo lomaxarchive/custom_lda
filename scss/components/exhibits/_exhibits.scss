@@ -1,0 +1,18 @@
+.mainpage {
+  &.exhibit-basic-page {
+    box-shadow: inset 0 0 0 2000px rgba(73, 112, 104, 0.8);
+    background-attachment: fixed;
+
+    .content {
+      color: #fab785;
+    }
+
+    .footer.footer a {
+      color: #fab785;
+    }
+
+    .svg-page {
+      filter: brightness(0) saturate(100%) invert(96%) sepia(39%) saturate(2154%) hue-rotate(301deg) brightness(100%) contrast(97%);
+    }
+  }
+}

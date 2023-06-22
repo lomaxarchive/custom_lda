@@ -1,0 +1,157 @@
+// Explore page.
+.explore-page {
+  &.mainpage.node-735,
+  &.mainpage {
+    box-shadow: inset 0 0 0 2000px rgba(58, 73, 86, 0.8);
+    background-attachment: fixed;
+  }
+
+  &.mainpage.node-735 .content,
+  &.mainpage .content{
+    color: #F8CDBF;
+  }
+
+  &.mainpage.node-735 .footer.footer a,
+  &.mainpage .footer.footer a{
+    color: #F8CDBF;
+  }
+
+  &.mainpage.node-735 .svg-page,
+  &.mainpage .svg-page {
+    filter: brightness(0) saturate(100%) invert(73%) sepia(5%) saturate(2910%) hue-rotate(318deg) brightness(124%) contrast(95%);
+  }
+}
+
+// Podcast page.
+.podcast-page {
+  &.mainpage.node-745,
+  &.mainpage {
+    box-shadow: inset 0 0 0 2000px rgba(68, 49, 61, 0.8);
+    background: url("../../../sites/default/files/images/site_bg-2.jpg");
+  }
+
+  &.mainpage.node-745 .content,
+  &.mainpage.node-745 .content {
+    color: #D2E7AD;
+  }
+
+  &.mainpage.node-745 .footer.footer a,
+  &.mainpage .footer.footer a {
+    color: #D2E7AD;
+  }
+
+  &.mainpage.node-745 .svg-page,
+  &.mainpage .svg-page {
+    filter: brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(1529%) hue-rotate(28deg) brightness(87%) contrast(114%);
+  }
+}
+
+// Main site about page.
+.about-page {
+  &.mainpage.node-62107,
+  &.mainpage {
+    box-shadow: inset 0 0 0 2000px rgba(104, 80, 52, 0.8);
+    background: url("../../../sites/default/files/images/site_bg-2.jpg");
+    background-attachment: fixed;
+  }
+
+  &.mainpage.node-62107 .content,
+  &.mainpage .content {
+    color: #DBDCE0;
+  }
+
+  &.mainpage.node-62107 .footer.footer a,
+  &.mainpage .footer.footer a {
+    color: #DBDCE0;
+  }
+
+  &.mainpage.node-62107 .svg-page,
+  &.mainpage.node-62107 .svg-page {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7460%) hue-rotate(178deg) brightness(93%) contrast(89%);
+  }
+}
+
+// Donate page.
+.donate-page {
+  &.mainpage.node-62105,
+  &.mainpage {
+    box-shadow: inset 0 0 0 2000px rgba(104, 80, 52, 0.8);
+    background: url("../../../sites/default/files/images/site_bg-2.jpg");
+    background-attachment: fixed;
+  }
+
+  &.mainpage.node-62105 .content,
+  &.mainpage .content {
+    color: #DBDCE0;
+  }
+
+  &.mainpage.node-62105 .content a,
+  &.mainpage .content a {
+    color: white;
+  }
+
+  &.mainpage.node-62105 .footer.footer a,
+  &.mainpage .footer.footer a{
+    color: #DBDCE0;
+  }
+
+  &.mainpage.node-62105 .svg-page,
+  &.mainpage .svg-page {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7460%) hue-rotate(178deg) brightness(93%) contrast(89%);
+  }
+
+}
+
+body.browseby-page {
+  .page-header {
+    font-family: $font-family-basic;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 48px;
+    color: #647c87;
+  }
+
+  .region-content {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    padding-left: 13.3%;
+    padding-right: 13.3%;
+  }
+
+  .footer.footer a {
+    color: #647c87;
+  }
+
+  .svg-page {
+    filter: invert(45%) sepia(29%) saturate(282%) hue-rotate(154deg) brightness(97%) contrast(89%);
+  }
+
+  h3 {
+    font-family: $font-family-basic;
+    color: $text-color-light;
+  }
+
+  .browseby-more {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-top: .5px solid gray;
+    margin-top: 4rem;
+    text-align: center;
+  }
+}
+
+.node-preview-container {
+  margin-top: -17px;
+}
+
+.node-preview-form-select {
+  padding: 17px;
+}
+
+.mainpage.exhibit-basic-page .footer.footer a {
+  color: #fab785;
+}
+
+.mainpage.exhibit-basic-page .svg-page {
+  filter: brightness(0) saturate(100%) invert(96%) sepia(39%) saturate(2154%) hue-rotate(301deg) brightness(100%) contrast(97%);
+}

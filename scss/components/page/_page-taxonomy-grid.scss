@@ -1,0 +1,14 @@
+.taxonomy-grid {
+
+    select#edit-field-model-target-id {
+        border-radius: 20px;
+        width: 200px;
+    }
+
+    button#edit-submit-taxonomy-term {
+        background: $archive-highlight-color;
+        border-radius: 20px;
+        width: 100px;
+        border: none;
+    }
+}

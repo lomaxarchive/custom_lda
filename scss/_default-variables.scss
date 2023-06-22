@@ -19,12 +19,25 @@
 // (ex: rgba($base-color, 1), rgba($base-color, .9), etc. While specific variants
 // are defined below, it may become necessary to accommodate a particular elements style
 // to create a new color using a non strongly defined opacity (EX: rgba($base-color, .44)).
-$base-color: #2766c6;
-$base-color-high: rgba($base-color, .75);
-$base-color-half: rgba($base-color, .50);
-$base-color-quarter: rgba($base-color, .25);
-$base-color-tenth: rgba($base-color, .10);
-$base-color-fifth: rgba($base-color, .05);
+//$base-color: #313842;
+//$base-color-high: rgba($base-color, .75);
+//$base-color-half: rgba($base-color, .50);
+//$base-color-quarter: rgba($base-color, .25);
+//$base-color-tenth: rgba($base-color, .10);
+//$base-color-fifth: rgba($base-color, .05);
+
+
+$base-color     : var(--base-color) !default;
+$secondary-color: var(--tertiary-color) !default;
+$tertiary-color : var(--secondary-color) !default;
+
+// 'Base' color utility variables.
+$base-color-high   : var(--base-color-high) !default;
+$base-color-half   : var(--base-color-half) !default;
+$base-color-quarter: var(--base-color-quarter) !default;
+$base-color-tenth  : var(--base-color-tenth) !default;
+$base-color-fifth  : var(--base-color-fifth) !default;
+
 
 // Define the grayscale-base used through the theme. Use it by passing it into rgba(), and
 // specify its opacity as required. Expected usage is increments of 10
@@ -66,21 +79,20 @@ $text-color-dark:    #1a1d1f;
 $sidebar-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11);
 $filter-btn-close:   rgba(39, 102, 198, 0.75);
 $sidebar-border: 1px solid rgba(39, 102, 198, 0.05);
-$collection-header-bg: #282a2c;
+$collection-header-bg: #2e3944;
 $panel-borders:      rgba(39, 102, 198, .25);
+
 
 // Set colors.
 $brand-text-em-color: #3a6ab4;
-$brand-primary: $base-color;
 $footer-menu-background-color: #F2F4F3;
 $body-background-color: $white-base;
-
-// Set the directory for the theme root used to locate images, fonts etc.
-$theme-root: '..';
+$fp-title-color: #E0AF70;
 
 // Set other directories relative to theme root.
-$image-path: '#{$theme-root}/images';
-$icon-font-path: '#{$theme-root}/bootstrap/assets/fonts/bootstrap/';
+$image-path    : "../dgi_i8_base/images" !default;
+$dgi-icons-path: "../dgi_i8_base/images/svg/icons" !default;
+$icon-font-path: "../dgi_i8_base/bootstrap/assets/fonts/bootstrap/" !default;
 
 // Font family.
 $body-font-family: Lora, sans-serif, Helvetica, Arial, sans-serif;
@@ -100,15 +112,15 @@ $solr-list-display-tr-th-color: $solr-list-display-anchor-color;
 $solr-grid-display-label-styling-color: #555555;
 $solr-grid-display-grid-background: $off-white-base;
 $solr-grid-display-row-background: #f4f4f4;
-$solr-grid-display-grid-box-shadow-color: 0 1px 2px rgba(0, 0, 0, 0.09);;
+$solr-grid-display-grid-box-shadow-color: 0 1px 2px rgba(0, 0, 0, 0.09);
 
 // Variables used in the 'pager' component.
-$pager-border-color: transparent;
-$pager-color: #3A6AB4;
-$pager-active-bg-color: $pager-border-color;
-$pager-item-bg-color: $pager-active-bg-color;
-$pager-bg-color: $white-base;
-$pager-border-top-color: #C9CCD1;
+//$pager-border-color: transparent;
+//$pager-color: #3A6AB4;
+//$pager-active-bg-color: $pager-border-color;
+//$pager-item-bg-color: $pager-active-bg-color;
+//$pager-bg-color: $white-base;
+//$pager-border-top-color: #C9CCD1;
 
 // Variables used on the solr-search-result page.
 $solr-search-display-header-color: $base-color-high;
@@ -156,10 +168,10 @@ $margin-exposed-sort-offset:      -13px;
 // Footer styling variables.
 $footer-border-color:      $autocomplete-border;
 $footer-menu-header-color: $popover-title-color;
-$footer-menu-link-color:   rgba(39, 102, 198, 0.75);
+$footer-menu-link-color:   $text-color-light;
 $footer-basic-text-color:  $text-color-light;
 $footer-bottom-bg-color:   rgba($grayscale-base, 0.50);
-$footer-bottom-text-color: $white-base;
+$footer-bottom-text-color: $text-color-light;
 $footer-bg-color:          $off-white-base;
 
 // Lots of arbitrary color changes here, between front page/all other pages.
@@ -173,3 +185,4 @@ $front-bg-lg:             rgba($white-base, .75);
 $not-front-search-bg:     $base-color;
 $search-border:           rgba($white-base, .75);
 $content-counts-bg-color: #001b2c;
+$archive-highlight-color: #c0ab85;

@@ -1,0 +1,41 @@
+
+.top-display-person {
+  border-radius: 4px 50px 4px 4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #a2824aad;
+  padding: 3rem;
+  text-align: justify;
+
+  h2 {
+    font-family: Calistoga;
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+.btn.btn-action {
+  background: #02232e;
+  border-radius: 25px;
+  font-size: .9em;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto';
+
+  &:hover {
+    background: lightgrey;
+  }
+}
+
+.btn:hover, .btn:focus, .btn.focus {
+  color: #333;
+  text-decoration: none;
+}

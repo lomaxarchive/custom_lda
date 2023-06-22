@@ -5,6 +5,18 @@ type: theme
 base theme: dgi_i8_base
 core_version_requirement: ^8 || ^9
 package: 'Bootstrap'
+libraries-override:
+  dgi_i8_base/framework:
+    css:
+      theme:
+        css/style.css: false
+        scss/style.scss: false
+  dgi_i8_base/color.preview:
+    css:
+      theme:
+        color/preview.css: false
+    js:
+      color/preview.js: false
 regions:
   navigation: Navigation
   header: 'Top Bar'
@@ -30,3 +42,4 @@ regions:
 libraries:
 - 'custom_lda/global-styling'
 - 'custom_lda/fonts'
+- 'custom_lda/color.preview'
